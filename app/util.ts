@@ -8,6 +8,11 @@ export interface LinkKey {
   active: boolean
 }
 
+export interface LoginState {
+  success: boolean
+  message: string
+}
+
 // Class for Google Font
 export const barlow = Barlow({
   weight: '700',

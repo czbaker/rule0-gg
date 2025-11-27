@@ -3,9 +3,9 @@
 import { useActionState } from 'react'
 import { fbAuth } from '../firebase/firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import { barlow } from '../util'
+import { barlow, type LoginState } from '../util'
 
-async function handleLogin(prevState, formData: FormData) {
+async function handleLogin(prevState: LoginState | null, formData: FormData) {
   const email = formData.get('email') as string
   const password = formData.get('password') as string
 
